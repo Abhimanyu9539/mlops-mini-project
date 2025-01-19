@@ -62,5 +62,5 @@ jobs:
       - name: Build docker image
         if: success()
         run: |
-          docker build -t #{{ secrets.DOCKER_HUB_USERNAME }}/emotions2:latest .
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/emotions2:latest .
 
