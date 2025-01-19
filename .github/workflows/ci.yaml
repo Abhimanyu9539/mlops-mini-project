@@ -64,3 +64,7 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/emotions2:latest .
 
+      - name: Push Docker Image to Docker hub
+        if: success()
+        run: |
+          docker push ${{ secrets.DOCKER_HUB_USERNAME}}/emotions2:latest
