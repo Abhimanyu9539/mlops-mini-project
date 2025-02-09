@@ -89,4 +89,4 @@ jobs:
             docker pull 668225365479.dkr.ecr.us-east-1.amazonaws.com/abd-ecr:latest
             docker stop my-app || true
             docker rm my-app || true
-            docker run -d -p 80:5000 -e DAGSHUB_PAT=${{ secrets.DAGSHUB_PAT }} --name 668225365479.dkr.ecr.us-east-1.amazonaws.com/abd-ecr:latest
+            docker run -d -p 80:5000 -e DAGSHUB_PAT=${{ secrets.DAGSHUB_PAT }} --name campusx-app 668225365479.dkr.ecr.us-east-1.amazonaws.com/abd-ecr:latest
